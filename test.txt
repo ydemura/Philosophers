@@ -1,0 +1,119 @@
+leaks Report Version: 4.0
+Process 42835: 164 nodes malloced for 18 KB
+Process 42835: 0 leaks for 0 total leaked bytes.
+
+0 5 has taken a fork
+0 3 has taken a fork
+0 3 has taken a fork
+0 3 is eating
+0 1 has taken a fork
+0 1 has taken a fork
+0 1 is eating
+60 1 is sleeping
+60 5 has taken a fork
+60 5 is eating
+60 2 has taken a fork
+60 3 is sleeping
+60 2 has taken a fork
+60 2 is eating
+60 4 has taken a fork
+120 5 is sleeping
+120 2 is sleeping
+120 1 is thinking
+120 1 has taken a fork
+120 1 has taken a fork
+120 1 is eating
+120 4 has taken a fork
+120 4 is eating
+120 3 is thinking
+120 3 has taken a fork
+180 5 is thinking
+180 2 is thinking
+180 1 is sleeping
+180 2 has taken a fork
+180 4 is sleeping
+180 3 has taken a fork
+180 5 has taken a fork
+180 5 has taken a fork
+180 5 is eating
+180 3 is eating
+240 4 is thinking
+240 1 is thinking
+240 3 is sleeping
+240 2 has taken a fork
+240 5 is sleeping
+240 2 is eating
+240 4 has taken a fork
+240 4 has taken a fork
+240 4 is eating
+240 1 has taken a fork
+300 2 is sleeping
+300 4 is sleeping
+300 1 has taken a fork
+300 1 is eating
+300 5 is thinking
+300 5 has taken a fork
+300 3 is thinking
+300 3 has taken a fork
+300 3 has taken a fork
+300 3 is eating
+360 2 is thinking
+360 4 is thinking
+360 1 is sleeping
+360 3 is sleeping
+360 2 has taken a fork
+360 2 has taken a fork
+360 2 is eating
+360 5 has taken a fork
+360 5 is eating
+360 4 has taken a fork
+420 3 is thinking
+420 1 is thinking
+420 2 is sleeping
+420 5 is sleeping
+420 4 has taken a fork
+420 4 is eating
+420 1 has taken a fork
+420 1 has taken a fork
+420 1 is eating
+420 3 has taken a fork
+480 1 is sleeping
+480 2 is thinking
+480 2 has taken a fork
+480 5 is thinking
+481 4 is sleeping
+481 3 has taken a fork
+481 3 is eating
+481 5 has taken a fork
+481 5 has taken a fork
+481 5 is eating
+540 1 is thinking
+541 4 is thinking
+541 5 is sleeping
+541 1 has taken a fork
+541 3 is sleeping
+541 2 has taken a fork
+541 2 is eating
+541 4 has taken a fork
+541 4 has taken a fork
+541 4 is eating
+602 2 is sleeping
+602 3 is thinking
+602 5 is thinking
+602 5 has taken a fork
+602 1 has taken a fork
+602 4 is sleeping
+602 1 is eating
+602 3 has taken a fork
+602 3 has taken a fork
+602 3 is eating
+662 2 is thinking
+662 5 has taken a fork
+662 5 is eating
+662 4 is thinking
+662 4 has taken a fork
+662 2 has taken a fork
+662 2 has taken a fork
+662 2 is eating
+722 4 has taken a fork
+722 4 is eating

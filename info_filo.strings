@@ -1,0 +1,148 @@
+/* 
+  info_filo.strings
+  philosophers_xcode
+
+  Created by Yuliia Demura on 12/3/21.
+  Copyright © 2021 Yuliia Demura. All rights reserved.
+*/
+
+
+pattern I dont like
+make && ./philo 3 600 200 200
+3rd philo started much later
+
+make && ./philo 5 600 200 200
+- same
+
+make && ./philo 19 800 20 20
+- weird pattern
+
+
+
+
+
+
+
+
+Number: 1 or more
+Activities:
+eat
+think
+sleep
+
+Each filo John has 1 fork.
+Each John eat with 2 forks
+
+eating finished 2 forks -> sleeping 0 forks -> thinking 0 forks -> eating || dying if cannot eat
+
+"??"
+• Philosophers don’t speak with each other
+• Philosophers don’t know when another philosopher is about to die
+
+"arguments:"
+//number_of_philosophers == number of forks
+    Each philosopher should be given a number from 1 to ’number_of_philosophers’.
+    
+    Philosopher number 1 is next to philosopher number ’number_of_philosophers’. Any other philosopher with the number N is seated between philosopher N - 1 and philosopher N + 1.
+
+//time_to_die
+    if time John started previous meal/beginning of simul + time till this meal > time to die, John dies
+
+//time_to_eat - how long eating last (time 2 forks use)
+
+//time_to_sleep - spent sleaping
+    
+//[number_of_times_each_philosopher_must_eat]
+    argument is optional, if all philosophers eat at least ’number_of_times_each_philosopher_must_eat’ the simulation will stop. If not specified, the simulation will stop only at the death of a philosopher.
+
+time - always in miliseconds
+
+Any change of status of a philosopher must be written as follows:
+
+X replaced with the philosopher number
+timestamp_in_ms the current timestamp in miliseconds:
+
+◦ timestamp_in_ms X has taken a fork ◦ timestamp_in_ms X is eating
+◦ timestamp_in_ms X is sleeping
+◦ timestamp_in_ms X is thinking
+◦ timestamp_in_ms X died
+
+• The status printed should not be scrambled or intertwined with another philosopher’s status.
+• You can’t have more than 10 ms between the death of a philosopher and when it will print its death.
+
+
+"TASK:"
+
+Program name
+philo
+Turn in files
+philo/
+Makefile
+Yes
+Arguments
+number_of_philosophers
+time_to_die
+time_to_eat
+time_to_sleep
+[number_of_times_each_philosopher_must_eat]
+
+External functs.
+memset,
+printf,
+malloc,
+free,
+write,
+"!" usleep,
+int usleep(useconds_t microseconds); ret 0 or -1 if mistake
+
+"!" gettimeofday,
+#include <sys/time.h>
+"int gettimeofday(struct timeval *restrict tp, void *restrict tzp)"
+
+If tp is NULL and tzp is non-NULL, gettimeofday() will populate the timezone struct in tzp.  If tp is non-NULL and tzp is NULL, then only the timeval struct in tp is populated. If both tp and tzp are NULL, nothing is returned.
+
+The structures pointed to by tp and tzp are defined in <sys/time.h> as:
+
+struct timeval {
+		time_t       tv_sec;   /* seconds since Jan. 1, 1970 */
+		suseconds_t  tv_usec;  /* and microseconds */
+};
+A 0 return value indicates that the call succeeded.  A -1 return value indicates an error occurred
+	
+pthread_create,
+"!" pthread_detach,
+DESCRIPTION
+     The pthread_detach() function is used to indicate to the implementation that storage for the
+     thread thread can be reclaimed when the thread terminates.  If thread has not terminated,
+     pthread_detach() will not cause it to terminate.  The effect of multiple pthread_detach()
+     calls on the same target thread is unspecified.
+
+RETURN VALUES
+     If successful, the pthread_detach() function will return zero.  Otherwise an error number will
+     be returned to indicate the error.  Note that the function does not change the value of errno
+     as it did for some drafts of the standard.  These early drafts also passed a pointer to
+     pthread_t as the argument.  Beware!
+
+ERRORS
+     The pthread_detach() function will fail if:
+
+     [EINVAL]           The implementation has detected that the value specified by thread does not
+                        refer to a joinable thread.
+
+
+
+
+pthread_join,
+pthread_mutex_init,
+pthread_mutex_destroy,
+pthread_mutex_lock,
+pthread_mutex_unlock
+
+
+Description
+philosopher with threads and mutex
+
+The specific rules for the mandatory part are:
+• Each philosopher should be a thread.
+• One fork between each philosopher, therefore if they are multiple philosophers, there will be a fork at the right and the left of each philosopher.
+• To avoid philosophers duplicating forks, you should protect the forks state with a mutex for each of them.
